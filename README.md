@@ -3,7 +3,7 @@ Simplified web search engine
 
 This a web search engine that operates the following way:
   scraper_converter.py starts with a given starting link and parses all the words, contained on that webpage, and links outgoing from the page. This operation continues recursively up to some predefined depth. 
-  After the process is finished is over, and all required material is collected, we can manually run the main.cpp file. Right after this, function, evaluating ranks of the pages will be called, and we are ready to search. It is able to find the request consisting of 1 word (for now...), and output the resulting websites in order of relevance.
+  After the process is finished is over, and all required material is collected, we can manually run the main.cpp file. Right after this, function, evaluating ranks of the pages will be called. It will insert all of the words into a Trie data structure for fast non-linear access. Now, we are ready to search. It is able to find the requests consisting of 1 word (for now...), and output the resulting websites in order of relevance. In case nothing is found, the appropriate message will appear.
 
 
   scraper_converter.py contains functions that create adjacency(accessibility) matrix of the available portion of web. Due to speed limitation of python, this routine is performed concurrently.
