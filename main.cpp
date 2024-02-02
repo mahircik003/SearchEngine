@@ -5,7 +5,7 @@
 
 using namespace std;
 
-
+//Using insertion sort will be very effective, as lots of pages have the same rank, the vector is partially sorted
 void insertionSort(std::vector<double> &ranks, std::vector<string> &sources)
 {
     int n = ranks.size();
