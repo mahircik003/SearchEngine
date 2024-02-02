@@ -36,23 +36,21 @@ int main()
 
     Eigen::MatrixXd resul = page_ranking(filename);
 
-    // cout<<resul<<endl;
-
     Trie<string> info;
 
     std::string file_name = "output.txt";
 
-    // Create an input file stream object
+    // Creating an input file stream object
     std::ifstream infile(file_name);
 
-    // Check if the file is open
+    // Checking if the file is open
     if (!infile.is_open())
     {
         std::cerr << "Error opening file: " << file_name << std::endl;
-        return 1; // Return an error code
+        return 1;
     }
 
-    // Read data from the file
+    // Reading data from the file
     std::string line;
     string source;
 
@@ -77,8 +75,6 @@ int main()
         ranks.push_back(resul(i));
     }
 
-
-    // Close the file
     infile.close();
 
 
